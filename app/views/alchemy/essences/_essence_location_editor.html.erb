@@ -1,0 +1,13 @@
+<div class="content_editor essence_select" id="<%= content.dom_id %>">
+  <% if Alchemy::Location.count > 0 %>
+    <%= label_and_remove_link(content) %>
+    <%= select_tag content.form_field_name,
+        options_for_select(Alchemy::Location.all.map {
+          |l| [l.title, l.id] }, content.ingredient),
+          :id => content.form_field_id, include_blank: true %>
+  <% else %>
+    <%= t('admin.essences.locations.none_exist') %>
+  <% end %>
+  <label for="<%= content.form_field_id %>" style="cursor: pointer; display: inline; display: inline-block; position: relative; top: 3px; margin: 0;">
+  </label>
+</div>
