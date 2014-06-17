@@ -1,0 +1,37 @@
+<%#= require 'pry'; binding.pry %>
+<%= alchemy_form_for @location, url: resource_path(@location), id: "new_location" do |f| %>
+<div class="field-row">
+    <%= f.input :title, wrapper_html: { class: 'input-container' }  %>
+</div>
+<div class="field-row">
+    <%= f.input :street, wrapper_html: { class: 'input-70 input-container' } %>
+    <%= f.input :number, wrapper_html: { class: 'input-25 input-container' } %>
+</div>
+<div class="field-row">
+    <%= f.input :postal_code, wrapper_html: { class: 'input-25 input-container' } %>
+    <%= f.input :city, wrapper_html: { class: 'input-70 input-container' } %>
+</div>
+<div class="field-row">
+    <%= f.input :lat, wrapper_html: { class: 'input-475 input-container' } %>
+    <%= f.input :lon, wrapper_html: { class: 'input-475 input-container' } %>
+</div>
+<div class="clearfix"></div>
+<div class="field-row">
+  <div class="input map-container">
+    <div id="map-input">
+    </div>
+  </div>
+</div>
+<%# resource_handler.attributes.each do |attribute| %>
+    <%# if relation = attribute[:relation] %>
+      <%#= f.association relation[:name].to_sym,
+        label_method: relation[:attr_method],
+        include_blank: _t(:blank, scope: 'resources.relation_select'),
+        input_html: {class: 'alchemy_selectbox'} %>
+    <%# else %>
+      <%#= f.input attribute[:name], resource_attribute_field_options(attribute) %>
+    <%# end %>
+  <%# end %>
+  <%= f.submit _t(:save) %>
+<% end %>
+

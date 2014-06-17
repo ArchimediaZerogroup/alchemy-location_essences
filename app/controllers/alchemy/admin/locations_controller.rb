@@ -4,6 +4,14 @@ module Alchemy
 
       before_action :get_lat_lon, only: [:create, :update]
 
+      def new
+        @location = Alchemy::Location.new
+      end
+
+      def edit
+        @location = Alchemy::Location.find(params[:id])
+      end
+
       private
         def resource_params
           params.require(:location).permit(

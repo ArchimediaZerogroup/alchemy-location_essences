@@ -1,0 +1,68 @@
+// include leaflet css
+@import 'leaflet';
+
+// maps
+.map-container {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 56.65%
+}
+
+[id^=map] {
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#new_location, .edit_location {
+  .control-label {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+    display: block;
+  }
+  input {
+    width: 100%;
+  }
+
+  .input {
+    float: left;
+    margin-right: 5%;
+    width: 100%;
+  }
+
+  .input.location_lat,
+  .input.location_lon {
+    display: none;
+  }
+
+  .input.map-container {
+    padding-top: 56%;
+  }
+
+  .input-container:last-child {
+    margin-right: 0;
+  }
+
+  .input-70 {
+    width: 70%;
+  }
+
+  .input-25 {
+    width: 25%;
+  }
+
+  .input-475 {
+    width: 47.5%;
+  }
+
+
+}

@@ -12,8 +12,8 @@ class AddLocations < ActiveRecord::Migration
       t.string :phone, limit: 32
       t.string :email, limit: 64
       t.text :description
-      t.string :lat, limit: 16
-      t.string :lon, limit: 16
+      t.string :lat, limit: 64
+      t.string :lon, limit: 64
 
       t.timestamps
     end
