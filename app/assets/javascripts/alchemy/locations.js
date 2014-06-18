@@ -76,7 +76,7 @@ $(document).ajaxStop(function() {
 
       var changedPos = ev.target.getLatLng();
       console.log(changedPos);
-      fillLatLon([changedPos["lat"], changedPos["lng"]]);
+      fillLatLon(changedPos);
 
   });
 });
