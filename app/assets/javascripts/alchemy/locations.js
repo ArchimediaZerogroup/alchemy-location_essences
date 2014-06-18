@@ -30,6 +30,7 @@ function setMarker(point) {
 }
 
 function fillLatLon(point) {
+  console.log(point);
   $('#location_lat').val(point["lat"]);
   $('#location_lon').val(point["lng"]);
 }
@@ -75,7 +76,6 @@ $(document).ajaxStop(function() {
   marker.on("dragend",function(ev){
 
       var changedPos = ev.target.getLatLng();
-      console.log(changedPos);
       fillLatLon(changedPos);
 
   });
