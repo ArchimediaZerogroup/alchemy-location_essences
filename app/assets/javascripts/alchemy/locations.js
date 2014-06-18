@@ -30,16 +30,17 @@ function setMarker(point) {
 }
 
 function fillLatLon(point) {
-  $('#location_lat').val(point[0]);
-  $('#location_lon').val(point[1]);
+  $('#location_lat').val(point["lat"]);
+  $('#location_lon').val(point["lng"]);
 }
 
 function lookup(street, number, postal_code) {
-  results = $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=1&street=' + street + " " + number + '&postalcode=' + postal_code, function (data) {
+  var lookupurl = 'http://nominatim.openstreetmap.org/search?format=json&limit=1&street=' + street + " " + number + '&postalcode=' + postal_code;
+  results = $.getJSON(lookupurl, function (data) {
       var items = [];
 
       $.each(data, function(key, val) {
-          var point = [parseFloat(val.lat), parseFloat(val.lon)];
+          var point = L.latLng(parseFloat(val.lat), parseFloat(val.lon));
           items.push(point);
       });
 
@@ -54,13 +55,11 @@ function check_input() {
   var street = $('#location_street').val();
   var number = $('#location_number').val();
   var postal_code = $('#location_postal_code').val();
-  if(
-    street.match(/\w{5,}/) &&
-    number.match(/\w{1,}/) &&
-    postal_code.match(/\w{4,}/)
-    ) {
+
+  if( street.match(/\w{5,}/) &&
+      postal_code.match(/\w{4,}/) ) {
     console.log("Street matches");
-    var point = lookup(street, number, postal_code);
+    lookup(street, number, postal_code);
   }
 }
 
