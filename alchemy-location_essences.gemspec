@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.1"
   s.add_dependency "leaflet-rails"
-  s.add_dependency "alchemy_cms", "~> 3.0.0"
+  s.add_dependency "alchemy_cms", github: "magiclabs/alchemy_cms", branch: "master"
 
   s.add_development_dependency "sqlite3"
 end
