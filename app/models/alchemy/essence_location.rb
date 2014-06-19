@@ -5,7 +5,7 @@ module Alchemy
 
     def preview_text(max=30)
       return "" if location.blank?
-      location.name.to_s[0..max-1]
+      location.title.to_s[0..max-1]
     end
   end
 end
