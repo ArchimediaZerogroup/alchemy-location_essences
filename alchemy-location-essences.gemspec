@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "alchemy_essence_location/version"
+require "alchemy-location-essences/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "alchemy_essence_location"
-  s.version     = Alchemy::Locations::Essence::VERSION
+  s.name        = "alchemy-location-essences"
+  s.version     = Alchemy::Location::Essences::VERSION
   s.authors     = ["Martin Meyerhoff"]
   s.email       = ["mamhoff@gmail.com"]
   s.homepage    = "http://www.github.com/mamhoff/alchemy_essence_location"
