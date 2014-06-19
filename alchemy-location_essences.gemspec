@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Alchemy::LocationEssences::VERSION
   s.authors     = ["Martin Meyerhoff"]
   s.email       = ["mamhoff@gmail.com"]
-  s.homepage    = "http://www.github.com/mamhoff/alchemy_essence_location"
+  s.homepage    = "http://www.github.com/mamhoff/alchemy-location_essences"
   s.summary     = "A Location Essence for Alchemy CMS"
   s.description = "A Location Essence for Alchemy CMS"
   s.license     = "MIT"

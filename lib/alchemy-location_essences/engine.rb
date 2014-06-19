@@ -1,4 +1,4 @@
-require "alchemy-location-essences/ability"
+require "alchemy-location_essences/ability"
 
 module Alchemy
   module LocationEssences
