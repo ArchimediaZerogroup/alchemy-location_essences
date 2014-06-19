@@ -1,7 +1,5 @@
 module Alchemy
-  module Location
-    module Essences
-    end
+  module LocationEssences
   end
 end
 
