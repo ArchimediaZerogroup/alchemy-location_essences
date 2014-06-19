@@ -1,4 +1,4 @@
-class Alchemy::Location::Essences::Ability
+class Alchemy::LocationEssences::Ability
   include CanCan::Ability
 
   def initialize(user)

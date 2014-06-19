@@ -6,4 +6,4 @@ module Alchemy
 end
 
 require "alchemy_cms"
-require "alchemy-location-essences/engine"
+require "alchemy-location_essences/engine"
