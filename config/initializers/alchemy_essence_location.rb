@@ -1,15 +1,4 @@
 Alchemy::Modules.register_module({
-  name: 'supporters',
-  order: 1,
-  navigation: {
-    name: 'modules.supporters',
-    controller: '/admin/supporters',
-    action: 'index',
-    icon: 'users'
-  }
-})
-
-Alchemy::Modules.register_module({
   name: 'locations',
   engine_name: 'alchemy',
   navigation: {
