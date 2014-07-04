@@ -15,8 +15,6 @@
       :latlng => [location.lat.to_f, location.lon.to_f],
       :zoom => options[:zoomlevel] ? options[:zoomlevel] : 15,
       },
-      :attribution => "<a href=\"http://www.openstreetmap.org/?mlat=#{location.lat}&mlon=#{location.lon}#map=15/#{location.lat}/#{location.lon}\" target=\"_blank\">#{I18n.t('views.footer.bigmap')}</a> | &copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> #{I18n.t('views.footer.mapattribution')}",
-      tile_layer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       :markers => [
         {
            :latlng => [location.lat.to_f, location.lon.to_f],
